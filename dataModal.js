@@ -1,5 +1,5 @@
 import { getFetchRequest, postFetchRequest } from "./fetchRequestLib.js";
-import { cancelFunction, dataManage, displayData } from "./functions.js";
+import { cancelFunction,  displayData } from "./functions.js";
 
 export const dataModal = (action) => {
     const body = document.querySelector('body');
