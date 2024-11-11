@@ -1,19 +1,19 @@
 //** get request with fetch---->
-import { dataModal } from './dataModal';
+
 export const getFetchRequest = (url) => {
 
-        return fetch(url)
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`Data did not get from server !`)
-                }
-                return response.json();
-            })
-            .then((data) =>data)
-            .catch(error=>{
-                throw error;
-            })
-        };
+    return fetch(url)
+        .then((response) => {
+           if (!response.ok) {
+                throw new Error(`Data did not get from server !`)
+            }
+           return response.json();
+        })
+       .then((data) =>data)
+       .catch(error=>{
+          throw error;
+        })
+};
 
 export const postFetchRequest =  (url, data) => {
     return fetch(url, {
@@ -38,7 +38,7 @@ export const editFetchRequest = (url , data) => {
     return fetch(url, {
         method : 'PUT',
         headers : {
-            'Content-Type' : 'application/json'
+            "Content-Type" : "application/json"
         },
         body : JSON.stringify(data)
     })
@@ -46,7 +46,7 @@ export const editFetchRequest = (url , data) => {
         if (!response.ok) {
             throw new Error(`ERROR: Data Did Not Updated In server....!`);           
         }
-        return response.join();
+        return response.json();
     })
     .then((data) => data)
     .catch((error) => {

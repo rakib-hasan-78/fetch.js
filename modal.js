@@ -73,6 +73,9 @@ const eventFunction = (action) => {
         case 'post':
             dataModal('post');
             break;    
+        case 'put':
+            dataModal('put');
+            break;    
         default:
             console.log("Unknown action");
             break;

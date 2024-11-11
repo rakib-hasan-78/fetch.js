@@ -17,7 +17,7 @@ addData.addEventListener('click', (e)=>{
 const editData = document.getElementById('edit-data');
 editData.addEventListener('click', (e)=>{
     e.preventDefault();
-    modal(`Sure to edit Data ?`, 'get')
+    modal(`Sure to edit Data ?`, 'put')
 });
 const deleteData = document.getElementById('delete-data');
 deleteData.addEventListener('click', (e)=>{

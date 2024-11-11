@@ -1,4 +1,4 @@
-import { getFetchRequest, postFetchRequest } from "./fetchRequestLib.js";
+import { editFetchRequest, getFetchRequest, postFetchRequest } from "./fetchRequestLib.js";
 import { cancelFunction,  displayData } from "./functions.js";
 
 export const dataModal = (action) => {
@@ -114,6 +114,7 @@ export const dataModal = (action) => {
     })
 };
  const eventFunction = (action, objs) => {
+    const targetID = objs.id;
     switch (action) {
         case 'post':
             postFetchRequest('http://localhost:3000/users', objs)
@@ -125,11 +126,23 @@ export const dataModal = (action) => {
                 localStorage.setItem('user-data', JSON.stringify(response));
             })
             .catch(error=>{
-                console.error(error);
+                console.error(error);   
                 document.getElementById('data-info').innerHTML = error;
             })
             break;
-    
+          case 'put':
+            editFetchRequest(`http://localhost:3000/users/${targetID}`, objs)
+                .then(() => {
+                    return getFetchRequest('http://localhost:3000/users')
+                })
+                .then((response) => {
+                    displayData(response, 'data-info');
+                    localStorage.setItem('user-data', JSON.stringify(response));
+                })
+                .catch((error) => {
+                    console.error(error);
+                    document.getElementById('data-info').innerHTML = error;
+                })
         default:
             break;
     }
