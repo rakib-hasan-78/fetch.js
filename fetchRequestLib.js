@@ -52,4 +52,19 @@ export const editFetchRequest = (url , data) => {
     .catch((error) => {
         throw error;
     })
+}
+export const deleteFetchRequest = (url) => {
+    return fetch(url,{
+        method : 'DELETE',
+    })
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error(`ERROR: Data Did Not Delete From Server...!`);
+        }
+        return null 
+    })
+    .catch(error=>{
+        console.error(error);
+        throw error;
+    })
 }       

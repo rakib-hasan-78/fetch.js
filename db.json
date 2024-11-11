@@ -179,51 +179,6 @@
         "phone": "+81-90-12345678"
       },
       "id": "7dfd"
-    },
-    {
-      "name": "Anna Kowalska",
-      "age": 30,
-      "sex": "Female",
-      "address": "Warsaw, Poland",
-      "state": "Mazowieckie",
-      "country": "Poland",
-      "profession": "Economist",
-      "organization": "Central Bank of Poland",
-      "contacts": {
-        "email": "anna.kowalska@cbp.pl",
-        "phone": "+48-22-6543210"
-      },
-      "id": "cb02"
-    },
-    {
-      "name": "George Smith",
-      "age": 39,
-      "sex": "Male",
-      "address": "Toronto, Canada",
-      "state": "Ontario",
-      "country": "Canada",
-      "profession": "Project Manager",
-      "organization": "Smith Projects Ltd.",
-      "contacts": {
-        "email": "george.smith@smithprojects.com",
-        "phone": "+1-416-7891234"
-      },
-      "id": "5338"
-    },
-    {
-      "id": "qnh12",
-      "name": "any one",
-      "age": "21",
-      "sex": "m",
-      "contacts": {
-        "email": "lalu@gmail.com",
-        "phone": "0912284955"
-      },
-      "address": "kkshbxc, aus",
-      "state": "sydney",
-      "country": "australia",
-      "profession": "not sure",
-      "organization": "n/p"
     }
   ]
 }

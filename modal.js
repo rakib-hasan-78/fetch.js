@@ -1,4 +1,5 @@
 import { dataModal } from './dataModal.js';
+import { deleteModal } from './deleteData.js';
 import { getFetchRequest } from './fetchRequestLib.js';
 import { cancelFunction, displayData } from './functions.js';
 
@@ -75,7 +76,9 @@ const eventFunction = (action) => {
             break;    
         case 'put':
             dataModal('put');
-            break;    
+            break;
+        case 'delete':
+            deleteModal('delete');        
         default:
             console.log("Unknown action");
             break;

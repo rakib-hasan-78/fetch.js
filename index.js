@@ -22,7 +22,7 @@ editData.addEventListener('click', (e)=>{
 const deleteData = document.getElementById('delete-data');
 deleteData.addEventListener('click', (e)=>{
     e.preventDefault();
-    modal(`want to delete a Data ?`)
+    modal(`want to delete a Data ?`, 'delete')
 });
 
 // Immediately load data from localStorage if available on page load

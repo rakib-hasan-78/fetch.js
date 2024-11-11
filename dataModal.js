@@ -144,6 +144,7 @@ export const dataModal = (action) => {
                     document.getElementById('data-info').innerHTML = error;
                 })
         default:
+            console.log("Unknown action");
             break;
     }
 }
