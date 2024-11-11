@@ -1,3 +1,4 @@
+import { dataModal } from './dataModal.js';
 import { getFetchRequest } from './fetchRequestLib.js';
 import { cancelFunction, displayData } from './functions.js';
 
@@ -41,6 +42,7 @@ export const modal = (text, action) => {
     actionBtn.addEventListener('click', (e)=>{
         e.preventDefault();
         eventFunction(action);
+        cancelFunction(body, modal, backdrop);
     })
 }
 
@@ -69,7 +71,7 @@ const eventFunction = (action) => {
                 })
             break;
         case 'post':
-            
+            dataModal('post');
             break;    
         default:
             console.log("Unknown action");
