@@ -91,6 +91,7 @@ export const dataModal = (action) => {
 
     const btnPrimary = modal.querySelector('.btn-primary');
     btnPrimary.addEventListener('click', (e)=>{
+
         const obj = {
             id:modal.querySelector('#recipient-id').value.trim(),
             name:modal.querySelector('#recipient-name').value.trim(),
@@ -106,6 +107,7 @@ export const dataModal = (action) => {
             profession:modal.querySelector('#recipient-profession').value.trim(),
             organization:modal.querySelector('#recipient-organization').value.trim()
         }
+        
         e.preventDefault();
         eventFunction(action, obj);
         cancelFunction(body,modal, backdrop);
